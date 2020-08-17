@@ -1,0 +1,26 @@
+.ui-dialog .dialog-buttons {
+    margin: 10px 0 0 0;
+    padding: 8px 0 0 0;
+    border-top: 1px solid #cccccc;
+}
+
+.ui-dialog .dialog-buttons .dialog-buttons-inner {
+    height: 25px;
+    line-height: 12px;
+}
+
+.ui-dialog .dialog-buttons .dialog-link,
+.ui-dialog .dialog-buttons .dialog-text {
+    display: block;
+    padding: 6px 0;
+    margin: 0 10px 0 0;
+    _display: inline;
+}
+
+.ui-dialog .dialog-buttons .left {
+    float: left;
+}
+
+.ui-dialog .dialog-buttons .right {
+    float: right;
+}

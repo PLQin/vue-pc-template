@@ -1,0 +1,8 @@
+.compass{
+	background:url(../images/gauge-bg.png) no-repeat;
+}
+.canvas-error{
+	width:240px;
+	height:240px;
+	padding:12px 0 0 12px;
+}

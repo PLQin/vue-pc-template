@@ -1,0 +1,73 @@
+<h3>说明文档</h3>
+<p>基于 jQuery 开发的表单验证组件。配合jquery.tips.js组件，提供更友好的交互。</p>
+<p>
+<strong>使用方法与参数说明：</strong>
+<pre class="brush:js">
+    $( "selector" ).validate({
+        fields: {
+            "txt-required": {					//需要验证字段的id
+                required: true					//该字段不能为空
+            },
+            "txt-max-length": {		
+                maxLength: 5					//该字段最多字符数
+            },
+            "txt-digits-max": {		
+                digits: true,					//该字段只能填写数字
+                max: 100						//数字最大值
+            },
+            "txt-email": {		
+                email: true						//Email验证
+            },
+            "txt-url": {		
+                url: true						//URL验证
+            },
+            "txt-password": {		
+                required: true,		
+                minLength: 6					//该字段最少6位
+            },
+            "txt-confirm-password": {		
+                equalTo: "txt-password",		//密码验证，两次输入密码是否一致
+                msg: "两次输入的密码不一致"		//自定义错误提示信息
+            },
+            "radio-status": {		
+                required: true					//单选按钮验证
+            },
+            "cb-group": {		
+                required: true					//多选按钮验证
+            }
+        },
+        error: function( e, field ) {
+            var tipEl = field.el;
+            
+            if ( tipEl.is( "input:checkbox, input:radio" )) {
+                tipEl = tipEl.parents( ".field-input" );
+            }
+            
+            tipEl.tips({
+                content: field.msg,
+                position: "right",
+                color: "red",
+                autoHide: false
+            });
+        },
+        valid: function( e, field ) {
+            field.el.tips( "hide" );
+        }
+    });
+</pre>
+</p>
+<p>
+<strong>表单验证API:</strong>
+<pre class="brush:js">
+	$( ".form" ).validate( "validate" );	//传递字符串 "validate" 验证所有字段是否满足上面验证条件
+	$( "#txt-required," +
+		"#txt-max-length," +
+		"#txt-digits-max," +
+		"#txt-email," +
+		"#txt-url," +
+		"#txt-password," +
+		"#txt-confirm-password," +
+		".field-input" ).tips( "hide" );		//使用$( SELECTOR ).tips( "hide" )方法清除错误信息提示
+</pre>
+</p>
+<p>更多细节请查看 Demo 及源代码。</p>

@@ -1,0 +1,87 @@
+
+/* ----- Global Style ----- */
+
+body {
+    font: 12px "微软雅黑", "宋体", Verdana, Helvetica, sans-serif;
+    color: #333333;
+}
+
+a:link {
+    color: #3f5f94;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #3f5f94;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+    color: #000000;
+    font-weight: bold;
+}
+
+h4 {
+	font-size:12px;
+}
+
+h3 {
+	font-size:14px;
+}
+
+h2 {
+	font-size:16px;
+}
+
+h1 {
+	font-size:18px;
+}
+
+.healthy {
+    color: #669933;
+}
+
+.unhealthy {
+    color: #ff3300;
+}
+
+.secondary {
+    color: #666666;
+}
+
+em, .em {
+    font-weight: bold;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    max-height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+/* required comment for clearfix to work in Opera \*/
+* html .clearfix {
+    height:1%;
+}
+.clearfix {
+    display:block;
+}
+/* end clearfix */

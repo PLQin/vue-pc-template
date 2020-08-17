@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>lazimg</title>
+	<link rel="stylesheet" type="text/css" href="../../styles/pages.css" />
+	<style type="text/css" media="screen">
+	   img {
+	       display: block;
+	       width: 200px;
+	       height: 300px;
+	       border: 1px solid #cccccc;
+	       margin-bottom: 20px;
+	   }
+	   
+	   img.lazimg-loading {
+	       background: url(../images/loading.gif) no-repeat 0 0;
+	   }
+	   
+	</style>
+    
+    <script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery.lazimg.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    
+</head>
+<body>
+
+<div class="wrapper">
+    <img alt="1" lazy="images/1.jpg" />
+    <img alt="2" lazy="images/2.jpg" />
+    <img alt="3" lazy="images/3.jpg" />
+    <img alt="4" lazy="images/4.jpg" />
+    <img alt="5" lazy="images/5.jpg" />
+</div>
+
+</body>
+</html>

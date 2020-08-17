@@ -1,0 +1,29 @@
+<h3>说明文档</h3>
+<p>
+<strong>使用方法与参数说明：</strong>
+<pre class="brush:js">
+$( "selector" ).popbox({
+    width: "auto",                      //弹出框的宽度，可以使number或者"auto"
+    height: "auto",                     //弹出框的高度，可以使number或者"auto"
+    content: "<p>test</p>",             //弹出框的内容，可以使HTML String或者jQuery Object或者HTML Element
+    autoShow: true,                     //是否在初始化之后自动显示
+    position: "right left bottom top",  //弹出框显示的位置，按优先级从左到右排列
+    offset: 5,                          //弹出框与element间的距离
+    arrowWidth: 20,                     //弹出框箭头的宽度
+    arrowHeight: 10,                    //弹出框箭头的高度
+    buttons: [],                        //弹出框操作按钮的配置，与lightbox组件相同
+    hide: null,                         //hide事件处理函数
+    show: null                          //show事件处理函数
+});
+</pre>
+</p>
+
+<strong>popbox支持这些API方法：</strong>
+<pre class="brush:js">
+$( "selector" ).popbox( "boxEl" );          //获取弹出框的HTML元素
+$( "selector" ).popbox( "show" );           //显示弹出框
+$( "selector" ).popbox( "hide", false );    //隐藏弹出框，第二个参数指定弹出框的隐藏方式：false用display:none；true用left:-99999999px
+$( "selector" ).popbox( "remove" );         //从DOM中移除弹出框的HTML元素
+$( "selector" ).popbox( "refresh" );        //重新计算弹出框的位置
+</pre>
+</p>

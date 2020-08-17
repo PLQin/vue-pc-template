@@ -1,0 +1,90 @@
+<h3>说明</h3>
+<strong>第一步：嵌入图表flash</strong>
+<p>
+<pre class="brush:js">
+	var flashvars = {
+		"input"                 : encodeURIComponent(data), //图表的数据，格式是json字符串,详见chart.json
+		"annotationsEnabled"    : "true",
+		"handCursorEnabled"     : "true",
+		"msgAnnotationSingular" : "1 条注释",
+		"msgAnnotationsPlural"  : encodeURIComponent("%s 条注释"),
+		"msgCreateAnnotation"   : "创建新注释"
+	};
+	var params = {
+		menu: "false",
+		wmode: "transparent"
+	};
+
+	swfobject.embedSWF( "../../swfs/chart.swf", "chart", 800, 200, "9.0.0", false, flashvars, params );
+</pre>
+</p>
+
+
+<strong>第二步：初始化图表flash</strong>
+<p>
+<pre class="brush:js">
+	function establishCommunication() {
+		var	flash = $( "#chart" )[0];
+		if (flash.establishCommunication) {
+			var b = {
+				'addAnnotations': 1,
+				'closeEditedAnnotation': 0,
+				'getSelectedDate': 0,
+				'getSetUpErrors': 0,
+				'openForEdit': 1,
+				'removeAnnotations': 1,
+				'selectDate': 1,
+				'setJson': 1,
+				'showAlertHighlight': 1
+			};
+			var d = {
+				'addNewAnnotation': 1,
+				'cancelDateSelection':0,
+				'isAllowedToChange': 0,
+				'openDrawer': 0,
+				'openDrawer_': 0,
+				'setSelectedDate': 1,
+				'waitForFlash': 1
+			};
+			flash.establishCommunication(b, 'annotationChart', d, true); //第二个参数是指定回调函数的对象
+		} else {
+			setTimeout(establishCommunication, 100);
+		}
+	}
+    
+	establishCommunication();
+</pre>
+</p>
+<p>
+图表支持的回调函数有：
+<pre class="brush:js">
+    window.annotationChart = {
+        isAllowedToChange: function() { //是否允许选择数据点
+            return false;
+        },
+        addNewAnnotation: function( data ) { //点击“创建新注释”时调用
+            
+        },
+        setSelectedDate: function ( date ) { //点击选择数据点时调用
+            
+    	}
+    };
+</pre>
+</p>
+
+<p>
+图表的flash对象支持的api接口有：
+<pre class="brush:js">
+    var chart = $( "#chart" )[0],
+        annotation = {
+            "id": "annotation-id",
+            "creator": "admin",
+			"date": "20110218",
+			"text": "注释内容"
+        };
+    chart.addAnnotations( $.toJSON( annotation )); //向图表里添加注释
+    chart.selectDate( "20110218" ); //选择某天的数据点，若要取消选择则传入null
+</pre>
+</p>
+
+<p>更多细节请查看 Demo。</p>

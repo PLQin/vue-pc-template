@@ -1,0 +1,79 @@
+
+.tip-holder {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.tip-holder.tip-top {
+    padding-bottom: 5px;
+}
+
+.tip-holder.tip-bottom {
+    padding-top: 5px;
+}
+
+.tip-holder.tip-right {
+    padding-left: 5px;
+}
+
+.tip-holder.tip-left {
+    padding-right: 5px;
+}
+
+.tip-content {
+    font-size: 12px;
+    line-height: 12px;
+    color: #ffffff;
+    text-shadow: 0 0 2px #000000;
+    padding: 7px 10px 5px;
+    background-color: #333333;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    box-shadow: 0 0 3px #555555;
+    -webkit-box-shadow: 0 0 3px #555555;
+    -moz-box-shadow: 0 0 3px #555555;
+}
+
+.tip-arrow {
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+}
+
+.tip-arrow-inner {
+    position: absolute;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 6px;
+    height: 0;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    _border-color: pink;
+    _filter: chroma(color=pink);
+    _border-width: 5px;
+}
+
+.tip-holder.tip-top .tip-arrow {
+    width: 12px;
+    height: 6px;
+}
+
+.tip-holder.tip-bottom .tip-arrow {
+    width: 12px;
+    height: 6px;
+}
+
+.tip-holder.tip-right .tip-arrow {
+    width: 6px;
+    height: 12px;
+}
+
+.tip-holder.tip-left .tip-arrow {
+    width: 6px;
+    height: 12px;
+}

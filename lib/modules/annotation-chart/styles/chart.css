@@ -1,0 +1,115 @@
+.green-font{
+	color:#006600;
+}
+.red-font{
+	color:#ff0000;
+	font-weight:600;
+}
+.scarlet-font{
+	color:#cc0000;
+}
+.gray-font{
+	color:#999;
+}
+.btn{
+	width:70px;margin:10px 20px 0 0;
+}
+/*--- mod-chart ---*/
+.mod-chart{
+	position:relative;
+}
+	.chart-mark{
+		margin-top:10px;	
+	}
+	.chart-mark sub{
+		display:inline-block;width:50px;height:3px;margin-right:5px;
+		background:url(../images/chart-line.png) 0 bottom no-repeat;
+	}
+	.chart-mark .green-line{
+		margin-left:20px;
+	}
+	.chart-mark .green-line sub{
+		background-position:0 top;_background-position:0 10px;
+	}
+	.mod-chart a.excel{
+		margin-left:10px;padding:0 0 2px 20px;
+		font-weight:normal;font-size:12px;
+		background:url("../images/excel.png") no-repeat;
+	}
+	.chart-datetime{
+		position:absolute;right:0;top:-5px;_right:20px;
+	}
+	.time-nuits{
+		position:relative;top:-2px;display:inline-block;margin-right:15px;
+		border:1px solid #646464;-moz-border-radius:3px;border-radius:3px;
+	}
+	.time-nuits a{
+		display:inline-block;width:22px;height:19px;
+		text-align:center;color:#333;line-height:1.6em;
+	}
+	.time-nuits a.selected,
+	.time-nuits a:hover{
+		background:#888;
+		text-decoration:none;color:#fff;
+	}
+	.time-nuits a.mid{
+		margin:0 -3px;+margin:0 -6px;
+		border-left:1px solid #646464;border-right:1px solid #646464;
+	}
+	.chart-datetime input{
+		width:115px;
+	}
+	.chart-datetime select{
+		width:121px;
+	}
+	.chart-datetime optgroup{
+		font-style:normal;
+	}
+	
+	#nuits-hour,
+	#nuits-month{
+		display:none;
+	}
+	.chart-area{
+		margin:10px 0 0;
+	}
+	#chart1{
+		height:200px;
+		position:relative;
+	}
+.editArea {
+		display:none;margin:-5px 0 6px; padding:10px 20px;width:758px;
+		background:#f5f5f5;border-left:1px solid #ccc;border-right:1px solid #ccc;
+	}
+	.editArea .hd{
+		margin-bottom:10px;
+	}
+		.editArea .hd em,
+		.annotationList .hd em{
+			font-style:normal;
+		}
+		.editArea .hd span,
+		.annotationList .hd span{
+			font-weight:normal;color:#999;
+			margin:0 10px;
+		}
+	.editArea textarea {
+		width: 450px;height:45px;display:block;
+	}
+	.editArea .btn{
+		width:90px;
+	}
+	.annotationList{
+		width:798px;margin-top:-6px;
+		border:1px solid #ccc;border-top:none;background:#f5f5f5;
+	}
+	.annotationList li{
+		margin:0 20px 0;padding:10px 0;border-bottom:1px dashed #ccc;
+	}
+		.annotationList li.last{
+			border:none;
+		}
+
+		.annotationList .hd{
+			margin-bottom:5px;
+		}

@@ -1,0 +1,57 @@
+.modal-box{
+    border: 4px solid #444444;
+	z-index: 1000;
+	padding: 12px 10px 11px 30px;
+}
+
+.modal-loading{
+	border-color: #98bae0;
+	padding-left:40px;
+	background:#fff url(../images/icon/icon-loading.gif) 10px center no-repeat;
+}
+
+	.modal-text{
+		color:#000;
+		font-size:14px;
+		line-height: 15px;
+		margin: 0
+	}
+
+	.modal-loading .modal-close, 
+	.modal-success .modal-close{
+		display:none;
+	}
+
+.modal-success{
+	border-color:#98bae0;
+	background:#fff url(../images/icon/icon-ok.png) 10px center no-repeat;
+}
+
+.modal-error{
+	border-color: #ed5657;
+	background:#fff url(../images/icon/icon-alert.png) 10px center no-repeat;
+	padding:12px 40px 11px 35px;
+}
+
+	.modal-error a.modal-close{
+		position: absolute;
+		display:block;
+		top:8px;
+		right: 10px;
+		height:17px;
+		width:19px;
+		padding-bottom:1px;
+		border:1px solid #a6a6a6;
+		background:#f4f4f4;
+		color:#aeaeae;
+		font-size:12px;
+		font-family:Verdana, Geneva, sans-serif;
+		text-decoration:none;
+		text-align:center;
+		font-weight:bold;
+	}
+
+	.modal-error a.modal-close:hover{
+		color:#fff;
+		background:#a6a6a6;
+	}

@@ -1,0 +1,36 @@
+.digit{
+	overflow:hidden;
+}
+
+.digit ul{
+	float:left;
+	width:390px;
+}
+
+.digit ul li{
+	float:right;
+	position:relative;
+	overflow:hidden;
+	width:30px;
+	height:40px;
+	background:url(../images/digit.png) no-repeat;
+}
+
+.digit ul li.odd{
+	margin-right:10px;
+}
+
+.digit ul li.bg{
+	background-position:0 -40px;
+}
+.digit ul li span{
+	display:block;
+	position:absolute;
+	width:30px;
+	height:40px;
+	color:#000;
+	font-size:32px;
+	text-align:center;
+	line-height:1.3em;
+	font-family:Arial,sans-serif;
+}

@@ -1,0 +1,25 @@
+<h3>说明</h3>
+<p>
+基于 jquery 开发的仪表盘组件，仅对支持 canvas 的浏览器有效 。
+</p>
+<p>
+<strong>使用方法与参数说明：</strong>
+<pre class="brush:js">
+	$( "selector" )compass ({
+			sector:[0, 360],				//表盘象限分布
+			range: [0, 360],				//指针值范围
+			r:100,							//圆半径，指针尖端距离坐标原点的绝对距离
+			x:150,							//坐标原点
+			y:150,							//坐标原点
+			pointerA:[120,0,"#09f",true],  	//指针偏转值，指针末端距离坐标原点的百分比,指针颜色,true表示指针存在。
+			pointerB:[0,0,"rgba(255,0,0,0.7)",false],
+			imgA:["id",0,0],				//指针图片id,修正图片坐标x,y
+			imgB:["id",0,0],
+			anticlockwise:true,   			//true 逆时针，false 顺时针
+			start:true,			  			//true 起点在右边，false 起点在左边，象限分布正好相反
+			speed:[2,1],	          		//指针速度
+			interval:10						//时间间隔
+	)};
+</pre>
+</p>
+<p>更多细节请查看 Demo。</p>

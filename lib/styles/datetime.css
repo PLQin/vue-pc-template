@@ -1,0 +1,7 @@
+.timepicker {
+    padding: 0 0 0.4em;
+}
+
+.timepicker select {
+    width: 60px;
+}

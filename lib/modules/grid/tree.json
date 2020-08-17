@@ -1,0 +1,51 @@
+{
+    "data": [{
+        "name": "业务支撑中心",
+        "current": "105",
+        "tongbi": 3.2,
+        "huanbi": 3.2,
+        "children": [{
+            "name": "业务开发组",
+            "current": "192",
+            "tongbi": -3.4,
+            "huanbi": -3.4,
+            "children": [{
+                "name": "张超",
+                "current": "234",
+                "tongbi": -2.5,
+                "huanbi": -2.5
+            }, {
+                "name": "黄丽娟",
+                "current": "1425",
+                "tongbi": 3.2,
+                "huanbi": 3.2
+            }, {
+                "name": "张明志",
+                "current": "235",
+                "tongbi": 3.2,
+                "huanbi": 3.2
+            }]
+        }, {
+            "name": "服务质量组",
+            "current": "192",
+            "tongbi": -3.4,
+            "huanbi": -3.4,
+            "children": [{
+                "name": "陈悦",
+                "current": "234",
+                "tongbi": -2.5,
+                "huanbi": -2.5
+            }, {
+                "name": "李琦",
+                "current": "1425",
+                "tongbi": 3.2,
+                "huanbi": 3.2
+            }, {
+                "name": "胡翔",
+                "current": "235",
+                "tongbi": 3.2,
+                "huanbi": 3.2
+            }]
+        }]
+    }]
+}

@@ -1,0 +1,54 @@
+<h3>说明文档</h3>
+<p>
+<strong>使用方法与参数说明：</strong>
+<pre class="brush:js">
+$( "selector" ).grid({
+    url: "",			 	//远程数据接口，数据格式见后面的说明
+    params: {}, 			//请求远程数据的参数
+    data: null, 			//本地数据，与远程数据接口二选一
+    columns: [], 			//表格的列配置，配置参数见后面的说明
+    border: "", 			//表格是否带边框，可接受的值：true/false或者css字符串
+    stripe: true, 			//数据行的斑马线效果
+    rowover: false,		 	//数据行的hover效果
+    selectable: false, 		//数据行是否可选择
+    selectType: "radio",	//数据选择的模式；radio－单选，checkbox－多选
+    paging: false, 			//是否支持分页
+    pagingToolbar: true, 	//是否显示分页工具栏
+    localPaging: false, 	//是否采用客户端分页，默认是服务器端分页（参数为start和offset）
+    capacity: 10, 			//每页有多少行数据
+    colResizable: true, 	//是否支持拖动改变列宽
+    colMinWidth: 80, 		//列的最小宽度
+    tree: false, 			//是否按树的格式渲染表格
+    holderSize: 16, 		//树节点收起icon的大小
+    sortable: true, 		//是否可以点击表头排序
+    sortType: "number", 	//排序的数据类型，目前支持string、date和number，默认自动判断
+    sortFunc: [function], 	//自定义的排序函数，会覆盖sortType属性，排序函数的写法参考源码中的$.fn.grid.sortFunc
+    colMenu: false 			//是否显示控制列隐藏的菜单
+});
+</pre>
+</p>
+<p>
+<strong>表格列配置对象的参数说明：</strong>
+<pre class="brush:js">
+{
+    width: 0, 			//列的宽度
+    align: "left", 		//文本的水平位置
+    dataIndex: "", 		//对应的数据字段名
+    header: "", 		//列表头的文本
+    headerAlign: "", 	//列表头文本的位置，默认与header的值相同
+    renderer: null 		//自定义单元格的渲染方式，接受一个function(val, rowIndex, colIndex, row, config)，返回HTML字符串/HTML元素/jQuery对象/数组
+}
+</pre>
+</p>
+<p>
+<strong>Grid组件支持一些自定义事件，说明如下：</strong>
+<pre class="brush:js">
+    load(e, grid): 			//grid加载完成之后触发
+    rowselect(e, rowObj): 	//数据行被选中时触发，参数rowObj包含3个属性index(int), select(boolean), data(object)
+    rowclick(e, rowObj): 	//数据行被点击时触发，参数rowObj包含2个属性index(int), data(object)
+    rowdblclick(e, rowObj): //数据行被双击时触发，参数rowObj包含2个属性index(int), data(object)
+    sort(e, sortObj): 		//排序之后之后触发，参数sortObj包含3个属性status(string), th(object), config(object)
+</pre>
+Grid的数据格式请参考：<a href='lib/modules/grid/data.json' target='_blank'>data.json</a>,<a href='lib/modules/grid/data.json' target='_blank'>tree.json</a>
+</p>
+<p>更多细节请查看 Demo 及源代码。</p>
