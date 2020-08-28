@@ -1,5 +1,6 @@
 {
   "code-runner.runInTerminal": true,
+  "git.ignoreLimitWarning": true,
   "vetur.format.defaultFormatterOptions": {
     "prettier": {
       "semi": false, //  不要分号分号
@@ -9,8 +10,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "editor.detectIndentation": false,
   "vetur.validation.template": false,
+  "editor.detectIndentation": false,
   "editor.tabSize": 2,
   "search.exclude": {
     "**/dist": true
@@ -19,4 +20,6 @@
     "**/dist/**": true
   },
   "eslint.alwaysShowStatus": true,
+  "terminal.integrated.confirmOnExit": true,
+  "terminal.integrated.cursorBlinking": true,
 }
