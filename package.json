@@ -10,20 +10,22 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "modern": "vue-cli-service build --modern",
+    "report": "vue-cli-service build --report-json",
     "lint": "vue-cli-service lint",
     "mock": "json-server --watch mock/db.js --m mock/post-to-get.js",
     "analyzer": "vue-cli-service build --report"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
     "axios": "^0.19.2",
+    "core-js": "^3.6.5",
     "dayjs": "^1.8.32",
     "js-cookie": "^2.2.1",
-    "vue": "^2.6.11",
-    "vue-router": "^3.0.6",
-    "vuex": "^3.1.1",
     "swiper": "^3.4.2",
-    "vue-i18n": "^8.3.2"
+    "vue": "^2.6.11",
+    "vue-i18n": "^8.3.2",
+    "vue-router": "^3.0.6",
+    "vuex": "^3.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.5",
@@ -43,11 +45,6 @@
     "vue-template-compiler": "^2.6.10",
     "webpack-bundle-analyzer": "^3.8.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "keywords": [
     "Vue",
     "Nuxt",
@@ -55,9 +52,12 @@
     "vue-pc-template",
     "vue-pc-base"
   ],
+  "gitHooks": {
+    "prepare-commit-msg": "lint-staged"
+  },
   "lint-staged": {
-    "src/**/*.{js,vue}": [
-      "eslint --fix",
+    "*.{js,vue}": [
+      "vue-cli-service lint",
       "git add"
     ]
   },
