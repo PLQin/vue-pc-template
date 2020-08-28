@@ -1,0 +1,71 @@
+{
+  "name": "vue-pc-template",
+  "version": "0.1.0",
+  "description": "Vue PC Template, all you need to do is `git clone`",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PLQin/vue-pc-template.git"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "mock": "json-server --watch mock/db.js --m mock/post-to-get.js",
+    "analyzer": "vue-cli-service build --report"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "axios": "^0.19.2",
+    "dayjs": "^1.8.32",
+    "js-cookie": "^2.2.1",
+    "vue": "^2.6.11",
+    "vue-router": "^3.0.6",
+    "vuex": "^3.1.1",
+    "swiper": "^3.4.2",
+    "vue-i18n": "^8.3.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.5",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "^4.5.3",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-lodash": "^3.3.4",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "eslint-plugin-babel": "^5.3.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.10",
+    "lint-staged": "^10.2.11",
+    "json-server": "^0.16.1",
+    "mockjs": "^1.1.0",
+    "webpack-bundle-analyzer": "^3.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "keywords": [
+    "Vue",
+    "Nuxt",
+    "template",
+    "vue-pc-template",
+    "vue-pc-base"
+  ],
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">= 12.18.0",
+    "npm": ">= 6.14.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
